@@ -3,7 +3,7 @@ package com.problems.TakeYouForward.TusharRoy.DP;
 public class CountNoOfBSTWithNKey {
 
     public static void main(String[] args) {
-        int n = 5;
+        int n = 3;
         countNoOfBST(n);
     }
 

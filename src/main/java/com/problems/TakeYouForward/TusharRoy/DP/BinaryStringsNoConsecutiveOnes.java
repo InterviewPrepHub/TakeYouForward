@@ -1,10 +1,55 @@
 package com.problems.TakeYouForward.TusharRoy.DP;
 
+/*
+n = 3
+000 - 5
+001 - 1
+010 - 2
+011
+
+100 - 3
+101 - 4
+110
+111
+
+- This is a fibonacci series. for n = 3
+- we are adding 0 to all binary numbers for n = 2 and 1 to all binary numbers for n = 2
+- after adding 0 to all binary numbers in n = 2 then the number of binary string with consecutive 1's
+  will be same as n = 2
+- after adding 1 to all binary numbers in n = 2 the we check
+
+n = 1
+0,1 -> here we have 2 no consecutive ones
+for n = 2
+00, 01, 10, 11 -> here we have 3 such no consecutive ones, we add 0 and 1 before all the binary numbers of 1
+
+00.      and     10
+01                    11
+f(2) = f(1)+f(0) = 2 + 1 = 3
+
+for n= 3
+we have n = 2, and we add 1 and zero before each
+00
+01
+10
+11
+
+f(3) = f(2)+f(1) = 3 + 2 = 5
+000
+001
+010
+011
+
+100
+101
+110
+111
+*/
 public class BinaryStringsNoConsecutiveOnes {
 
     public static void main(String[] args) {
 
-        countBinaryStrings(3);
+        System.out.println(countBinaryStrings(3));
     }
 
     private static int countBinaryStrings(int n) {
